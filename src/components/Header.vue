@@ -7,7 +7,7 @@ export default {};
     <div class="flex justify-between items-end py-5">
       <div class="flex items-center gap-8">
         <img
-          class="bg-gradient-to-r from-purple-500 to-pink-500 p-5"
+          class=" p-5"
           src="/images/Каталог бургер.svg"
           alt=""
         />
