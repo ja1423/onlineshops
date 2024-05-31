@@ -1,0 +1,107 @@
+<template>
+  <div class="container">
+    <div class="">
+      <div class="text-3xl my-24">
+        <h1>Новинки</h1>
+      </div>
+      <div
+        class="relative grid grid-cols-2 sm:grid-cols-1 md:grid-cols-6 gap-5"
+      >
+        <div v-for="(product, index) in data" :key="index">
+          <Product :product="product" v-if="product.sale == true" />
+        </div>
+
+        <button
+          class="gradient-border border border-gradien border-[#a446fc] py-2 flex flex-col items-center justify-end"
+        >
+          Все товары
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { reactive } from "vue";
+import Product from "./SlideForProducts.vue";
+const products = reactive([
+  {
+    img: "/images/t-shirt1.png",
+    salePrice: 2399,
+    sale: true,
+    info: "Футболка с дизайнерским принтом Super Shape 04 формулы",
+  },
+  {
+    img: "/images/t-shirt9 1.png",
+    salePrice: 1375,
+    sale: true,
+    info: "Футболка с дизайнерским принтом Super Shape 04 формулы",
+  },
+  {
+    img: "/img/t-shirt6.png",
+    salePrice: 2399,
+    sale: true,
+    info: "Футболка с дизайнерским принтом Super Shape 04 формулы",
+  },
+  {
+    img: "/img/phone4.png",
+    salePrice: 1999,
+    sale: true,
+    info: "Чехол для iphone 12 с дизайнерским принтом Super Shape 03",
+  },
+  {
+    img: "/img/phone5.png",
+    salePrice: 1999,
+    sale: true,
+    info: "Чехол для iphone 12 с дизайнерским принтом Super Shape 03",
+  },
+  {
+    img: "/img/hat3.png",
+    salePrice: 599,
+    sale: true,
+    info: "Бейсболка с дизайнерским принтом Super Shape 01белая",
+  },
+   {
+    img: "/img/phone8.png",
+    salePrice: 1999,
+    sale: true,
+    info: "Чехол для iphone 12 с дизайнерским принтом Super Shape 03",
+  },
+   {
+    img: "/img/t-shirt2.png",
+    salePrice: 2399,
+    sale: true,
+    info: "Футболка с дизайнерским принтом Super Shape 04 формулы",
+  },
+
+   {
+    img: "/img/phone9.png",
+    salePrice: 1999,
+    sale: true,
+    info: "Чехол для iphone 12 с дизайнерским принтом Super Shape 03",
+  },
+   {
+    img: "/img/phone8.png",
+    salePrice: 1999,
+    sale: true,
+    info: "Чехол для iphone 12 с дизайнерским принтом Super Shape 03",
+  },
+  {
+    img: "/img/boy4.png",
+    salePrice: 1999,
+    sale: true,
+    info: "Футболка с дизайнерским принтом Super Shape 04 формулы",
+  },
+  {
+    img: "/img/t-shirt5.png",
+    salePrice: 2399,
+    sale: true,
+    info: "Футболка с дизайнерским принтом Super Shape 04 формулы",
+  },
+]);
+
+const data = products.filter((item) => item.sale);
+const data1 = products.filter((item) => !item.sale);
+</script>
+
+<style lang="scss" scoped></style>
