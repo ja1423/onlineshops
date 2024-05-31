@@ -10,9 +10,10 @@
         <div v-for="(product, index) in data" :key="index">
           <Product :product="product" v-if="product.sale == true" />
         </div>
-
+      </div>
+      <div class="flex justify-end w-full my-4">
         <button
-          class="gradient-border border border-gradien border-[#a446fc] py-2 flex flex-col items-center justify-end"
+          class="gradient-border border border-gradien border-[#a446fc] py-2 flex flex-col items-center justify-end px-4 "
         >
           Все товары
         </button>
@@ -61,26 +62,26 @@ const products = reactive([
     sale: true,
     info: "Бейсболка с дизайнерским принтом Super Shape 01белая",
   },
-   {
+  {
     img: "/img/phone8.png",
     salePrice: 1999,
     sale: true,
     info: "Чехол для iphone 12 с дизайнерским принтом Super Shape 03",
   },
-   {
+  {
     img: "/img/t-shirt2.png",
     salePrice: 2399,
     sale: true,
     info: "Футболка с дизайнерским принтом Super Shape 04 формулы",
   },
 
-   {
+  {
     img: "/img/phone9.png",
     salePrice: 1999,
     sale: true,
     info: "Чехол для iphone 12 с дизайнерским принтом Super Shape 03",
   },
-   {
+  {
     img: "/img/phone8.png",
     salePrice: 1999,
     sale: true,

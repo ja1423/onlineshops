@@ -11,8 +11,10 @@
           <Product :product="product" v-if="product.sale == true" />
         </div>
 
+      </div>
+       <div class="flex justify-end w-full my-4">
         <button
-          class="gradient-border border border-gradien border-[#a446fc] py-2 flex flex-col items-center justify-end"
+          class="gradient-border border border-gradien border-[#a446fc] py-2 flex flex-col items-center justify-end px-4 "
         >
           Все товары
         </button>
