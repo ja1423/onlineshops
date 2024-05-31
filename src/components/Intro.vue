@@ -1,3 +1,59 @@
+<template>
+  <div class="container mx-auto mt-5 px-3">
+    <div class="flex flex-col lg:flex-row gap-5 lg:gap-9">
+      <swiper
+        :slides-per-view="1"
+        :space-between="3"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :pagination="{
+          clickable: true,
+        }"
+        :modules="modules"
+        :navigation="true"
+        class="mySwiper w-full lg:w-[70%]"
+      >
+        <swiper-slide>
+          <img class="w-full" src="/images/baner1.png" alt="Banner 1" />
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full" src="/images/baner1.png" alt="Banner 2" />
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full" src="/images/baner1.png" alt="Banner 3" />
+        </swiper-slide>
+      </swiper>
+      <div class="flex flex-col gap-5 w-full lg:w-[30%]">
+        <img class="w-full" src="/images/image 15.png" alt="Image 15" />
+        <img class="w-full" src="/images/image 16.png" alt="Image 16" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
+
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Pagination, Autoplay, Navigation],
+    };
+  },
+};
+</script>
+
 <style>
 @import "swiper/swiper-bundle.css";
 
@@ -68,64 +124,3 @@
   width: 250px;
 }
 </style>
-
-<template>
-  <div class="container mx-auto mt-5 px-3">
-    <div class="flex gap-9">
-      <swiper
-        :slidesPerView="1"
-        :spaceBetween="3"
-        :loop="true"
-        :autoplay="{
-          delay: 2500,
-          disableOnInteraction: false,
-        }"
-        :pagination="{
-          clickable: true,
-        }"
-        :modules="modules"
-        :navigation="true"
-        class="mySwiper"
-      >
-        <swiper-slide
-          ><img class="w-full" src="/images/baner1.png" alt=""
-        /></swiper-slide>
-        <swiper-slide
-          ><img class="w-full" src="/images/baner1.png" alt=""
-        /></swiper-slide>
-        <swiper-slide
-          ><img class="w-full" src="/images/baner1.png" alt=""
-        /></swiper-slide>
-      </swiper>
-      <div class="flex flex-col gap-5 w-[70%]">
-        <img class="" src="/images/image 15.png" alt="" />
-        <img class="" src="/images/image 16.png" alt="" />
-      </div>
-    </div>
-  </div>
-</template>
-
-
-<script>
-
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-import { Pagination, Autoplay, Navigation } from "swiper/modules";
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    return {
-      modules: [Pagination, Autoplay, Navigation],
-    };
-  },
-};
-</script>
-
